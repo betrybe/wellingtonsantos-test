@@ -1,7 +1,7 @@
-import http from "../config/http";
+import http from '../config/http';
 
-const pegarTodasMoedas = () => http.get('/json/all')
+const pegarTodasMoedas = () => http.get('/json/all');
 
 export {
-    pegarTodasMoedas
-}
+  pegarTodasMoedas,
+};

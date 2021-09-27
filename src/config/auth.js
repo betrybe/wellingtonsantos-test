@@ -1,26 +1,21 @@
-const token = "UserToken"
+const token = 'UserToken';
 
-
-
-const saveAuth = (data) => localStorage.setItem(token, JSON.stringify(data))
+const saveAuth = (data) => localStorage.setItem(token, JSON.stringify(data));
 const getToken = () => {
-    const data = JSON.parse(localStorage.getItem(token))
-    if (data) {
-      return data
-    }
-    return false
+  const data = JSON.parse(localStorage.getItem(token));
+  if (data) {
+    return data;
   }
-  
+  return false;
+};
+
 const removeToken = () => localStorage.removeItem(token);
 
-const isAuthenticated = () => {
-    return getToken() !== false;
-}
-
+const isAuthenticated = () => getToken() !== false;
 
 export {
-    saveAuth,
-    getToken,
-    removeToken,
-    isAuthenticated
-}
+  saveAuth,
+  getToken,
+  removeToken,
+  isAuthenticated,
+};

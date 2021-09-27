@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
 
 import { BrowserRouter } from 'react-router-dom';
 import Routers from './Routers';
 
-import "antd/dist/antd.css";
-import GlobalStyle from './assets/Styles/globalStyled'
+import store from './store';
 
-import { Provider } from 'react-redux';
-import store from './store'
+import 'antd/dist/antd.css';
+import GlobalStyle from './assets/Styles/globalStyled';
+
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={ store }>
     <BrowserRouter>
       <GlobalStyle />
       <Routers />

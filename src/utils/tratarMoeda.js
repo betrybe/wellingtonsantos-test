@@ -1,3 +1,1 @@
-export const tratarMoeda = (moeda) => {
-    return Object.keys(moeda).map(key => moeda[key])
-};
+export const tratarMoeda = (moeda) => Object.keys(moeda).map((key) => moeda[key]);

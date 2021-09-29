@@ -33,5 +33,5 @@ export const userLogout = () => (disppatch) => {
 };
 
 export const gerarDespesas = (despesas) => async (dispatch) => {
-  dispatch({ type: TYPES.GERARDESPESAS, data: despesas })
-}
+  dispatch({ type: TYPES.GERARDESPESAS, data: despesas });
+};

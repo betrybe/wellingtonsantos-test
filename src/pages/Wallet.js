@@ -43,7 +43,8 @@ const Wallet = () => {
   return (
     <div>
       <form>
-        <label htmlFor="valor">Valor:
+        <label htmlFor="valor">
+          Valor:
           <input
             type="text"
             name="valor"
@@ -51,7 +52,8 @@ const Wallet = () => {
             value={ despesa.valor || '' }
           />
         </label>
-        <label htmlFor="descricao">Descrição:
+        <label htmlFor="descricao">
+          Descrição:
           <input
             type="text"
             name="descricao"
@@ -59,7 +61,8 @@ const Wallet = () => {
             value={ despesa.descricao || '' }
           />
         </label>
-        <label htmlFor="moeda">Moeda:
+        <label htmlFor="moeda">
+          Moeda:
           <select name="siglaMoedas" onChange={ handleChange }>
             <option value="#">Selecione</option>
             { siglasMoedas.map(
@@ -67,7 +70,8 @@ const Wallet = () => {
             ) };
           </select>
         </label>
-        <label htmlFor="metodoPagamento">Método de pagamento:
+        <label htmlFor="metodoPagamento">
+          Método de pagamento:
           <input
             type="text"
             name="metodoPagamento"
@@ -75,7 +79,8 @@ const Wallet = () => {
             value={ despesa.metodoPagamento || '' }
           />
         </label>
-        <label htmlFor="categoria">Categoria:
+        <label htmlFor="categoria">
+          Categoria:
           <select name="categoria" onChange={ handleChange }>
             <option value="#">Selecione</option>
             <option value="Lazer">Lazer</option>

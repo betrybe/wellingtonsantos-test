@@ -18,6 +18,9 @@ const reducer = (state = INITIAL_STATE, action) => {
   case TYPES.LOGOUT:
     state.user.email = '';
     return state;
+  case TYPES.GERARDESPESAS:
+    state.wallet.expenses = [...state.wallet.expenses, action.data];
+    return state;
   default:
     return state;
   }

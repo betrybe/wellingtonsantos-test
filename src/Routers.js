@@ -15,7 +15,7 @@ const Routers = () => {
   };
 
   return (
-    <Layout>
+    <Layout nomeDaPagina="TryBe Wallet">
       <Router>
         <Login path="/" />
         <UserRoute path="/carteira" component={ Wallet } />

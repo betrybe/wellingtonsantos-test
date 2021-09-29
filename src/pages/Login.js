@@ -37,9 +37,7 @@ const Login = () => {
     }
   };
 
-  const submit = async () => {
-    disppatch(userLogin(form));
-  };
+  const submit = async () => disppatch(userLogin(form));
 
   return (
     <ComponenteLogin>

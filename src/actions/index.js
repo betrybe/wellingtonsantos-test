@@ -6,6 +6,7 @@ export const TYPES = {
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT',
   GETMOEADAS: 'GETMOEDAS',
+  GERARDESPESAS: 'GERARDESPESAS',
 };
 
 export const userLogin = (form) => (disppatch) => {
@@ -30,3 +31,7 @@ export const userLogout = () => (disppatch) => {
     console.log(e);
   }
 };
+
+export const gerarDespesas = (despesas) => async (dispatch) => {
+  dispatch({ type: TYPES.GERARDESPESAS, data: despesas })
+}

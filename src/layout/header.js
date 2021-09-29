@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { PageHeader, Button } from 'antd';
 import { isAuthenticated, getToken } from '../config/auth';
@@ -10,13 +10,16 @@ import HeaderApp from '../assets/Styles/layout/header';
 const Header = () => {
   const dispatch = useDispatch();
   const moeda = useSelector((state) => state.wallet.moedas);
+  const despesas = useSelector((state) => state.global.wallet.expenses);
   const BRL = tratarMoeda(moeda).map((item) => item.codein);
-
-  const [totalDespesa, setTotalDespesa] = useState(0);
 
   useEffect(() => {
     getToken();
   }, []);
+
+  const somaDespesas = despesas.reduce((valor, somar) => Number(somar.valor) + Number(valor), 0);
+
+  const resultDespesas = Math.round((somaDespesas + Number.EPSILON) * 100) / 100;
 
   const logOut = () => {
     dispatch(userLogout());
@@ -33,8 +36,10 @@ const Header = () => {
           <div className="div-header">
             <p data-testid="total-field">
               Despesa total: R$
-              { totalDespesa }
-              <span data-testid="header-currency-field">{ BRL[0] }</span>
+              { resultDespesas }
+              <span data-testid="header-currency-field">
+                { BRL[0] }
+              </span>
             </p>
             <Button
               className="button" key="1" type="danger"

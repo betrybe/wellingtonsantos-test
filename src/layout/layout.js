@@ -1,17 +1,16 @@
 import React from 'react';
 import Header from './header';
-import Footer from './footer';
 import Main from '../assets/Styles/layout';
 
-const Layout = () => {
+const Layout = ({ nomeDaPagina, children }) => {
 
+  document.title = nomeDaPagina;
   return (
     <>
-      <Header />
+      <Header titulo={ nomeDaPagina } />
       <Main>
-        { Children }
+        { children }
       </Main>
-      <Footer />
     </>
   );
 };

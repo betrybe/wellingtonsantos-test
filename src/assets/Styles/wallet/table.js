@@ -6,12 +6,44 @@ export const ComponenteWallet = styled.div`
   align-items: center;
 
   button {
-    width: 90%;
+    width: 100px;
     border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  @media screen and (max-width: 414px){
+    button {
+      width: 90%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
   }
 `
 
 export const ComponenteForm = styled.div`
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    width: 97vw;
+  }
+
+  input, select {
+      border:0;
+      border-bottom: 2px solid #eee;
+      border-radius:10px;
+      background-color: #e6f2ff;
+      padding: 10px;
+      width: 100%;
+  }
+
+  label {
+    font-weight: bold;
+    width: 100%;
+  }
 
   @media screen and (max-width: 414px){
     form {
@@ -36,13 +68,6 @@ export const ComponenteForm = styled.div`
     }
 
   }
-
-  input, select {
-      border:0;
-      border-bottom: 2px solid #eee;
-      border-radius:10px;
-      background-color: #e6f2ff;
-    }
   
 `
 

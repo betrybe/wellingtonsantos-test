@@ -1,5 +1,29 @@
-// import user from './user';
-// import wallet from './wallet';
+import { TYPES } from '../actions';
 
-// Configure os seus reducers.
-// ATENÇÃO: você obrigatoriamente tem que utilizar as chaves "user" e "wallet" no seu estado global
+const INITIAL_STATE = {
+  user: {
+    email: '',
+  },
+  wallet: {
+    currencies: [],
+    expenses: [],
+  },
+};
+
+const reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+  case TYPES.LOGIN:
+    state.user.email = action.data;
+    return state;
+  case TYPES.LOGOUT:
+    state.user.email = '';
+    return state;
+  case TYPES.GERARDESPESAS:
+    state.wallet.expenses = [...state.wallet.expenses, action.data];
+    return state;
+  default:
+    return state;
+  }
+};
+
+export default reducer;

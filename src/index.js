@@ -1,14 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
 import { BrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App';
+import Routers from './Routers';
+
+import store from './store';
+
+import 'antd/dist/antd.css';
+import GlobalStyle from './assets/Styles/globalStyled';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={ store }>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Routers />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root'),
 );
 

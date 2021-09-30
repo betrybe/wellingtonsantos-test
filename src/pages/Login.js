@@ -40,7 +40,7 @@ const Login = () => {
   const submit = async () => disppatch(userLogin(form));
 
   return (
-    <ComponenteLogin>
+    <ComponenteLogin className="login" >
       <img src={ walletMobile } alt="ícone_carteira_no_telefone" />
       <p>
         <strong>Login</strong>

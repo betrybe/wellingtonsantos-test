@@ -3,13 +3,13 @@ import styled from 'styled-components';
 const Main = styled.div`
   
   @media screen and (max-width: 414px) {
-    div {
-        height: 435px;
-        width: 350px;
+    .login {
+        height: 470px;
+        width: 100%;
         display: flex;
-        justify-content: flex-end;
-        }
+        justify-content: center;
     }
+  } 
 `;
 
 export default Main;

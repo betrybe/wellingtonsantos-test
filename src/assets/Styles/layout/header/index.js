@@ -15,6 +15,7 @@ const HeaderApp = styled.div`
   @media screen and (max-width: 414px) {
     .ant-page-header-compact .ant-page-header-heading {
       justify-content: space-evenly;
+      width: 100vw;
     }
   
   }
